@@ -1,0 +1,85 @@
+
+
+<section id="checkout-login">
+  <div class="container-fluid containerhwlogin" style="background-color: transparent;">
+      <div class="row ">
+          <div class="col-md-12">
+              <div class="loginbox">
+                  <div class="loginheading">Login to Natureleen</div>
+                  <div id="resendotp_message" class="alert alert-success" style="display:none;"><i
+                          class="fa fa-check-circle"></i> OTP sent to your registered email id &amp; mobile. <button
+                          type="button" class="close" data-dismiss="alert">×</button></div>
+                  <!-- <div class="logintext">EASILY USING</div>
+                  <div class="row margintop20">
+                      <div class="col-md-6 col-xs-6"><a
+                              class="btn btn-fb col-xs-12 col-md-12"><span class="fb"><i
+                                      class="fa fa-facebook"></i></span><span
+                                  class="fmToggleSocialText">Facebook</span></a></div>
+                      <div class="col-md-6 col-xs-6"><a
+                             
+                              class="btn btn-google-plus-auth col-xs-12 col-md-12">
+                              <span class="gp"><i
+                                      class="fa fa-google-plus"></i></span><span class="fmToggleSocialText">
+                                  Google</span></a></div>
+                  </div> -->
+                  <div class="logintext1"> USING EMAIL -</div>
+                  <div class="row">
+                      <div class="col-md-12">
+                          <form  [formGroup]="loginForm">
+                          <div  class="loginborder">
+                              
+                              <input  type="email" formControlName="email" class="loginemail testemail"
+                                  id="loginemail" value="" placeholder="Your Email Address" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                            
+                                      
+                                  
+                                      
+                                 
+
+                              
+                          </div>
+                          <div  class="loginborder">
+                          <input  type="password"
+                          formControlName="Password"  class="loginpass" id="loginpassword"
+                      placeholder="Your Password">
+                          </div>
+                      
+                          <div *ngIf="submitted && f.email.errors" class="invalid-feedbacks">
+                              <div *ngIf="f.email.errors.required">Email is  required</div>
+                          </div>
+                          <div  *ngIf="f.email.errors" class="invalid-feedbacks">
+                          <div *ngIf="f.email.errors.emailDomain">Email must be on the gmail.com domain</div> 
+                      </div>
+                      <div *ngIf="submitted && f.email.errors"  class="invalid-feedbacks">
+                          <div *ngIf="f.email.errors.pattern">Please provide a valid Email</div>
+                         
+                      </div> 
+                     
+                      <div *ngIf="submitted && f.Password.errors" class="invalid-feedbacks">
+                          <div *ngIf="f.Password.errors.required">Password is required</div>
+                      </div>
+                          
+                      
+
+                              <button 
+                              id="checklogin" type="submit" 
+                              (click)="Authenticate()" class="btn btn-danger btn-checkot margintop20">Login</button>
+
+                          </form>
+                 
+                          
+                          
+                          
+                          <!-- <span class="error1" id="login_pass_error"></span><input type="hidden"
+                              id="register_telephone_value"><input type="hidden" id="email_value"><button
+                              id="checklogin" type="button" 
+                              class="btn btn-danger btn-checkot margintop20">Continue</button> -->
+                            
+                      
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>

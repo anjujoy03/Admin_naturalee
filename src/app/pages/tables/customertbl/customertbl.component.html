@@ -1,0 +1,49 @@
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card" style="width: 200%;overflow:scrollx; overflow-x: auto; ">
+                    <div class="card-header" style="background-color: white;">
+                        <strong class="card-title">Csutomer List</strong>
+                    </div>
+                    <div class="card-body">
+                        <table class="table" style="scroll-behavior: smooth; ">
+                            <col style="width:40%">
+	                   <col style="width:100px">
+	<col style="width:50%">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="width: 30px;">Id</th>
+                                    <th scope="col">Customer Id</th>
+                                    <th scope="col">Customer Name</th>
+                                    <th scope="col">Contact Number</th>
+                                    <th scope="col">Contact Email</th>
+                                    <th scope="col">Status</th>
+                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of this.CustomerList">
+                                    <th scope="row">{{item['reg_id']}}</th>
+                                    <td>{{item['customer_id']}}</td>
+                                    <td>{{item['customer_name']}}</td>
+                                    <td>{{item['customer_phone']}}</td>
+                                    <td>{{item['customer_email']}}</td>
+                                    <td>{{item['customer_status']}}</td>
+                                    
+                                    
+                                </tr>
+                                
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- .animated -->
+</div><!-- .content -->
+
+
+
+

@@ -1,0 +1,139 @@
+<div class="content mt-3">
+  <div class="animated fadeIn">
+
+    <div class="col-lg-10">
+      <div class="card">
+        <div class="card-header"
+          style="font-style: bold; font-family:'Arial Black', Gadget, sans-serif ; font-size:24px ; color:rgb(24, 148, 45);font-weight: 100;font-family: monospace;">
+          Product Form</div>
+        <div class="card-body card-block">
+          <form action="" [formGroup]="productForm" class="">
+            <div class="row form-group">
+              <div class="col col-md-3"><label for="text-input" class=" form-control-label" required>Product
+                  Name</label></div>
+              <div class="col-12 col-md-9"><input type="text" formControlName="prodname" id="prodname" 
+                  placeholder="Enter Product Name"  class="form-control" required><small
+                  class="form-text text-muted"></small></div>
+            </div>
+            <br>
+
+
+            <div class="row form-group">
+              <div class="col col-md-3"><label for="textarea-input" class=" form-control-label"
+                  required>Description</label></div>
+              <div class="col-12 col-md-9"><textarea formControlName="proddesc" id="longdescription" rows="4"
+                  placeholder="Enter Description In Detail" class="form-control" required ></textarea>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col col-md-3"><label for="text-input" class=" form-control-label">Price</label></div>
+              <div class="col-12 col-md-9"><input type="number" formControlName="price"  placeholder="Enter Price"
+                  class="form-control" required><small class="form-text text-muted"></small></div>
+            </div>
+            <div class="row form-group">
+              <div class="col col-md-3"><label for="text-input" class=" form-control-label">Offer Price</label></div>
+              <div class="col-12 col-md-9"><input type="number" id="discountprice" formControlName="offer_price"
+                  placeholder="Enter Discount Price" class="form-control" required><small
+                  class="form-text text-muted"></small></div>
+            </div>
+
+            <div class="row form-group">
+              <div class="col col-md-3"><label for="multiple-select" class=" form-control-label"
+                  required>Category</label>
+              </div>
+              <div class="col col-md-9">
+
+                <select class="form-control" formControlName="category_name" required style="width: 250px;">
+                  <option value="">Select Category</option>
+                  <option value="Outdoor Plants">Outdoor Plants</option>
+                  <option value="Indoor Plants">Indoor Plants</option>
+                  <option value="Air Purifying Plants">Air Purifying Plants</option>
+                  <option value="Adeniums">Adeniums</option>
+                  <option value="Flowering Plants">Flowering Plants</option>
+                  <option value="Artificail Grass">Artificail Grass</option>
+                  <option value="Curtains">Curtains</option>
+                  <option value="Carpets">Carpets</option>
+                  <option value="Doormats">Doormats</option>
+                  <option value="Blinds">Blinds</option>
+                  <option value="Cactus">Catctus & Succuents</option>
+                  <option value="Pots">Pots</option>
+                  <option value="Combo">Combo</option>
+           
+
+                </select>
+              </div>
+
+            </div>
+            <div class="row form-group">
+              <div class="col col-md-3"><label for="multiple-select" class=" form-control-label" required>Category
+                  Type</label></div>
+              <div class="col col-md-9">
+
+                <select class="form-control" formControlName="category_type" required style="width: 250px;">
+                  <option value="">Select Category Type</option>
+                  <option value="Best Selling Plants">Best Selling Plants</option>
+                  <option value="Green Gifting">Green Gifting</option>
+                  <option value="Others">Others</option>
+
+                </select>
+              </div>
+
+            </div>
+            <div class="row form-group">
+              <div class="col col-md-3"><label for="text-input" class=" form-control-label">Enter Quantity</label></div>
+
+              <div class="col-12 col-md-9"><input type="number" id="discountquntity" formControlName="product_quantity"
+                  placeholder="Enter Quantity" class="form-control" required><small
+                  class="form-text text-muted"></small></div>
+            </div>
+
+            
+
+<!-- 
+            <div class="row form-group">
+              <div class="col col-md-3"><label for="text-input" class=" form-control-label">Offers</label></div>
+              <div class="col col-md-3">
+
+
+
+                <input type="text" width="100%" id="highlight" name="text-input" placeholder="Enter Offers"
+                  class="form-control" required></div>
+              <input type="button" value="+" onClick="displa()" />
+              <div id="dem" style="padding-left:235px; "></div>
+
+            </div> -->
+
+
+
+            <div class="row form-group">
+              <div class="col col-md-3"><label for="file-input" class=" form-control-label">Product Images</label>
+              </div>
+              <div class="col-12 col-md-9"><input type="file" id="singleimage" name="singleimage" (change)="oFileChange($event,'MAIN')" multiple formControlName="mainImage"
+                  class="form-control-file"></div>
+                  <!-- <div *ngIf="this.image_list.length>0">
+                    <div *ngFor="let item of this.image_list">
+                      {{item | json}}
+
+                    </div>
+                  </div> -->
+            </div>
+            <!-- <div class="row form-group">
+              <div class="col col-md-3"><label for="file-multiple-input" class=" form-control-label">Product Featured
+                  Image</label></div>
+              <div class="col-12 col-md-9"><input type="file" id="multipleimage" name="multipleimage" (change)="oFileChange($event,'FEAT')" formControlName="FetureImge" multiple
+                  class="form-control-file"></div>
+            </div> -->
+
+            <br>
+
+
+
+            <input class="btnn success" (click)="onSubmit()" id="submit" type="submit" value="Submit" style="border: black;">
+            <input class="btnn warning" type="reset" id="reset" value="Reset" style="border: black;">
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div><!-- .animated -->
+</div>

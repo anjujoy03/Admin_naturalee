@@ -1,0 +1,50 @@
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card" style="width: 178%;">
+                    <div class="card-header" style="background-color: white;">
+                        <strong class="card-title">Product List</strong>
+                    </div>
+                    <div class="card-body">
+                        <table class="table" style="scroll-behavior: smooth;">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Product Name</th>
+                                    <th scope="col">Product Category</th>
+                                    <th scope="col">Total Stock</th>
+                                    <th scope="col">Product Price</th>
+                                    <th scope="col">Offer Price</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of this.prod_list;let i=index">
+                                    <th scope="row">{{item['prod_id']}}</th>
+                                    <td>{{item['prod_name']}}</td>
+                                    <td>{{item['catogery_name']}}</td>
+                                    <td>{{item['product_quantity']}}</td>
+                                    <td>{{item['prod_price']}}</td>
+                                    <td>{{item['offer_price']}}</td>
+                                    <td> <input class="btnn success" (click)="Edit(item['prod_id'])" id="submit" type="submit" value="Edit" style="border: black;" style="margin-left: 10px;
+                                        width: 73px;
+                                        height: 27px;
+                                        border-radius: 5px;">
+                                        <input class="btnn warning" type="submit" (click)="Delete(item['prod_id'],i)"  id="reset" value="Delete" style="border: black;" style="margin-left: 10px;
+                                        width: 73px;
+                                        height: 27px;
+                                        border-radius: 5px;">
+                                  </td>
+                                </tr>
+                      
+                             
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- .animated -->
+</div><!-- .content -->
+

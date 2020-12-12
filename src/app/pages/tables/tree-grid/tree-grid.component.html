@@ -1,0 +1,61 @@
+<div class="content mt-3">
+  <div class="animated fadeIn">
+      <div class="row">
+          <div class="col-lg-6">
+              <div class="card" style="width: 200%;overflow:scrollx; overflow-x: auto; ">
+                  <div class="card-header" style="background-color: white;">
+                      <strong class="card-title">Order List</strong>
+                  </div>
+                  <div class="card-body">
+                      <form>
+                      <table class="table" style="scroll-behavior: smooth; ">
+                          <col style="width:40%">
+                   <col style="width:100px">
+                      <col style="width:50%">
+                          <thead>
+                              <tr>
+                                  <th scope="col" style="width: 30px;">Id</th>
+                                  <th scope="col">Order Id</th>
+                                  <th scope="col">Product Name</th>
+                                  <th scope="col">Product Quantity</th>
+                                  <th scope="col">Product Price</th>
+                                  <th scope="col">Total Price</th>
+                                 
+                               
+                                 
+                                 
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr *ngFor="let item of OrderList">
+                                  <th scope="row">{{item['detils_orderid']}}</th>
+                                  <td>{{item['detils_orderid']}}</td>
+                                  <td>{{item['detail_name']}}</td>
+                                  <td>{{item['detail_quantity']}}</td>
+                                  <td>{{item['detail_price']}}</td>
+                                  <td>{{item['detail_price'] * item['detail_quantity']}}</td>
+                     
+                   
+
+                                  
+                                  
+                                  
+                                  
+                                  
+                              </tr>
+                              
+                             
+                          </tbody>
+                      </table>
+                  </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div><!-- .animated -->
+</div><!-- .content -->
+
+
+
+
+

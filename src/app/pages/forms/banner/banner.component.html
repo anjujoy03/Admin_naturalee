@@ -1,0 +1,63 @@
+<!-- <div class="content mt-3">
+    <div class="animated fadeIn">
+  
+                                          <div class="col-lg-10" >
+                                            <div class="card">
+                                                <div class="card-header" style="font-style: bold; font-family:'Arial Black', Gadget, sans-serif ; font-size:24px ; color:rgb(24, 148, 45);font-weight: 100;font-family: monospace;" >Banner Form</div>
+                                                <div class="card-body card-block">
+                                                    <form action="" method="post" class="" >
+                                                       <div class="row form-group">
+                                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label"  required>Product Name</label>
+                                                        </div>
+                                                        <div class="col-12 col-md-9"><input type="text" id="prodname" name="text-input" placeholder="Enter Product Name"  maxlength="10"class="form-control" required ><small class="form-text text-muted"></small>
+                                                        </div>
+                                                       </div>
+                                                   
+              
+                                                    
+                                                          
+                                                    <input class="btnn success" id="submit" type="submit" value="Submit" style="border: black;">
+                                                    <input class="btnn warning" type="reset" id="reset" value="Reset" style="border: black;">
+                                              
+                                                    </form>
+                                                </div>
+                                                </div>
+                                            </div>
+                                           
+</div>
+                           -->
+
+
+
+ <div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="col-lg-10">
+            <div class="card">
+                <div class="card-header"
+                    style="font-style: bold; font-family:'Arial Black', Gadget, sans-serif ; font-size:24px ; color:#06F;">
+                    Banner Form
+                </div>
+                <div class="card-body card-block">
+                    <form action=""  class="" [formGroup]="myForm">
+                        <div class="row form-group">
+                            <div class="col col-md-3"><label for="file-input" class=" form-control-label">Image</label>
+                            </div>
+                            <div class="col-12 col-md-9"><input type="file" id="singleimage" formControlName="sliderimages"
+                                    class="form-control-file"  (change)="oFileChange($event)" multiple required>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-9" style="padding-left:210px;">
+                            <img id="output" width="25%" height="25%" style="border: 0px solid #555; " />
+                        </div>
+               
+                      
+                        <input class="btnn success" (click)="onSubmit()" id="submit" type="submit" value="Submit" style="border: black;">
+                        <input class="btnn warning" type="reset" id="reset" value="Reset" style="border: black;">
+                   </form>
+
+                </div>
+            </div>
+        </div>
+        </div>
+        </div> 
+   

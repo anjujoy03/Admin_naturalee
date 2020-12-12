@@ -1,0 +1,48 @@
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card" style="width: 178%;">
+                    <div class="card-header" style="background-color: white;">
+                        <strong class="card-title">Stock Table</strong>
+                    </div>
+                    <div class="card-body">
+                        <table class="table" style="scroll-behavior: smooth;">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Banner Image</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr *ngFor="let item of this.BannerList;let i=index;">
+                                    
+                                    <th scope="row">{{item['banner_id']}}</th>
+                                    <td>
+                                        <a href="{{'http://ec2-3-129-92-90.us-east-2.compute.amazonaws.com'+''+item['image_path']}}"></a>
+                                        <img src="{{'http://ec2-3-129-92-90.us-east-2.compute.amazonaws.com'+''+item['image_path']}}" style="border: 1px solid;" height=100 width=100></td>
+                                   
+                                    <td> <input class="btnn success" id="submit" type="submit" (click)="Edit(item['banner_id'])" value="Edit" style="border: black;" style="margin-left: 10px;
+                                        width: 73px;
+                                        height: 27px;
+                                        border-radius: 5px;">
+                                        <input class="btnn warning" type="submit" id="reset" (click)="Delete(item['banner_id'],i)" value="Delete" style="border: black;" style="margin-left: 10px;
+                                        width: 73px;
+                                        height: 27px;
+                                        border-radius: 5px;">
+                                  </td>
+                                </tr>
+                             
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- .animated -->
+</div><!-- .content -->
+
+
+

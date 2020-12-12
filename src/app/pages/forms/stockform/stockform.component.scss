@@ -1,0 +1,167 @@
+.pull-right{
+  position: absolute;
+  left: 311px;
+}
+.padding10 {
+  padding: 10px;
+}
+.headertopshadow {
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+}
+.navbar-default {
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+}
+.navbar-fixed-top {
+  top: 0;
+  border-width: 0 0 1px;
+}
+.navbar-fixed-top {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 0px;
+  border: 1px solid transparent;
+}
+.containerhwlogin {
+  margin-top: 60px;
+  padding-bottom: 90px;
+  background-color: #fcf9d6;
+}
+.containerhwlogin {
+  margin-top: 60px;
+  padding-bottom: 90px;
+  background-color: #fcf9d6;
+}
+
+.element.style {
+}
+.containerhwlogin {
+  margin-top: 60px;
+  padding-bottom: 90px;
+  background-color: #fcf9d6;
+}
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.loginbox {
+  width: 400px;
+  height: auto;
+  background-color: #fff;
+  margin: 40px auto 0;
+  padding: 20px;
+  box-shadow: 0 2px 15px rgba(0,0,0,.1);
+}
+.loginheading {
+  font-size: 22px;
+  padding-top: 5px;
+}
+.loginheading, a.fpass {
+  text-align: center;
+}
+span.fb {
+  background-color: #4460a0;
+}
+span.fb, span.gp {
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+.btn-fb span {
+  padding-left: 10px;
+}
+.btn-fb, .btn-google-plus-auth {
+  height: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: #fff;
+  color: #000;
+  position: relative;
+  padding-top: 15px;
+  text-transform: uppercase;
+}
+
+.btn-google-plus-auth {
+  border-radius: 5px;
+  border: 1px solid #CCC;
+}
+.btn-google-plus-auth span {
+  padding-left: 10px;
+}
+span.gp {
+  background-color: #ea4335;
+}
+.btn-google-plus-auth span {
+  padding-left: 10px;
+}
+.btn-fb, .btn-google-plus-auth {
+  height: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: #fff;
+  color: #000;
+  position: relative;
+  padding-top: 15px;
+  text-transform: uppercase;
+}
+.btn-fb {
+  padding-left: 8.5%;
+  border-radius: 5px;
+  border: 1px solid #CCC;
+  transition: all .2s;
+}
+.alert-success {
+  color: #fff;
+  background-color: #7eac47;
+  border-color: #578d15;
+}
+.logintext, .logintext1 {
+  color: #999;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.margintop20 {
+  margin-top: 20px;
+}
+.btn-danger:hover {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+.btn-checkot {
+  padding: 15px;
+  width: 100%;
+  text-transform: uppercase;
+}
+.loginborder {
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  padding: 0;
+  margin: 0;
+}
+input.loginemail {
+  border-radius: 5px;
+}
+input.loginemail, input.loginpass {
+  border: 0;
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  color: #666;
+  font-size: 13px;
+}
+.invalid-feedbacks{
+  color:red;
+  font-size: 12px;
+  text-align: end;
+}

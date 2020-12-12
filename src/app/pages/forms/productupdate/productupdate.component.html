@@ -1,0 +1,98 @@
+
+  <div class="content mt-3">
+    <div class="animated fadeIn">
+  
+      <div class="col-lg-10">
+        <div class="card">
+          <div class="card-header"
+            style="font-style: bold; font-family:'Arial Black', Gadget, sans-serif ; font-size:24px ; color:rgb(24, 148, 45);font-weight: 100;font-family: monospace;">
+            Add Blog</div>
+          <div class="card-body card-block">
+            <form action="" [formGroup]="productForm" class="">
+              <div class="row form-group">
+                <div class="col col-md-3"><label for="text-input" class=" form-control-label" required>Blog Name
+                    </label></div>
+                <div class="col-12 col-md-9"><input type="text" formControlName="blog_name" id="prodname" 
+                    placeholder="Enter Blog Name"  class="form-control" required><small
+                    class="form-text text-muted"></small></div>
+              </div>
+              <br>
+              <div class="row form-group">
+                <div class="col col-md-3"><label for="text-input" class=" form-control-label" required>Blog Heading
+                    </label></div>
+                <div class="col-12 col-md-9"><input type="text" formControlName="blog_head" id="prodname" 
+                    placeholder="Enter Blog Heading"  class="form-control" required><small
+                    class="form-text text-muted"></small></div>
+              </div>
+  
+  
+              <div class="row form-group">
+                <div class="col col-md-3"><label for="textarea-input" class=" form-control-label"
+                    required>Description</label></div>
+                <div class="col-12 col-md-9"><textarea formControlName="blog_desc" id="longdescription" rows="4"
+                    placeholder="Enter Description In Detail" class="form-control" required ></textarea>
+                </div>
+              </div>
+              
+              <div class="row form-group">
+                <div class="col col-md-3"><label for="file-input" class=" form-control-label">Edit Image</label>
+                </div>
+                <div class="col-12 col-md-9" *ngIf="this.id!=null">
+                    <img src="{{'http://ec2-3-129-92-90.us-east-2.compute.amazonaws.com'+''+this.prod_list[0]?.blog_Image}}" style="width: 115px;
+                    height: 36px;" ><br><br>
+                    <input type="file" id="singleimage" name="singleimage" (change)="oFileChange($event)" single 
+                    class="form-control-file">
+                </div>
+
+                <div class="col-12 col-md-9" *ngIf="this.id==null"><input type="file" id="singleimage" name="singleimage" (change)="oFileChange($event)" single 
+                    class="form-control-file"></div>
+              </div>
+         
+              <div class="row form-group">
+                <div class="col col-md-3"><label for="text-input" class=" form-control-label">Auther Name</label></div>
+                <div class="col-12 col-md-9"><input type="text" id="discountprice" formControlName="auth_name"
+                    placeholder="Enter Author  Name" class="form-control" required><small
+                    class="form-text text-muted"></small></div>
+              </div>
+  
+            
+  
+              
+  
+  <!-- 
+              <div class="row form-group">
+                <div class="col col-md-3"><label for="text-input" class=" form-control-label">Offers</label></div>
+                <div class="col col-md-3">
+  
+  
+  
+                  <input type="text" width="100%" id="highlight" name="text-input" placeholder="Enter Offers"
+                    class="form-control" required></div>
+                <input type="button" value="+" onClick="displa()" />
+                <div id="dem" style="padding-left:235px; "></div>
+  
+              </div> -->
+  
+  
+  
+         
+              <!-- <div class="row form-group">
+                <div class="col col-md-3"><label for="file-multiple-input" class=" form-control-label">Product Featured
+                    Image</label></div>
+                <div class="col-12 col-md-9"><input type="file" id="multipleimage" name="multipleimage" (change)="oFileChange($event,'FEAT')" formControlName="FetureImge" multiple
+                    class="form-control-file"></div>
+              </div> -->
+  
+              <br>
+  
+  
+  
+              <input class="btnn success" (click)="onSubmit()" id="submit" type="submit" value="Submit" style="border: black;">
+              <input class="btnn warning" type="reset" id="reset" value="Reset" style="border: black;">
+  
+            </form>
+          </div>
+        </div>
+      </div>
+    </div><!-- .animated -->
+  </div>

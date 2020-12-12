@@ -1,0 +1,58 @@
+<div class="content mt-3">
+  <div class="animated fadeIn">
+      <div class="row">
+          <div class="col-lg-6">
+              <div class="card" style="width: 200%;overflow:scrollx; overflow-x: auto; ">
+                  <div class="card-header" style="background-color: white;">
+                      <strong class="card-title">Blog List</strong>
+                  </div>
+                  <div class="card-body">
+                      <table class="table" style="scroll-behavior: smooth; ">
+                          <col style="width:40%">
+                   <col style="width:100px">
+<col style="width:50%">
+                          <thead>
+                              <tr>
+                                  <th scope="col" style="width: 30px;">Id</th>
+                                  <th scope="col">Blog Name</th>
+                                  <th scope="col">Blog Heading</th>
+                                  <th scope="col">Blog Descrption</th>
+                                  <th scope="col">Action</th>
+                            
+                                 
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr *ngFor="let item of this.prod_list;let i=index">
+                                  <th scope="row">{{item['blog_id']}}</th>
+                                  <td>{{item['blog_name']}}</td>
+                                  <td>{{item['blog_heading']}}</td>
+                                  <td>{{item['blog_desc']}}</td>
+                                  
+                                  <td> <input class="btnn success" id="submit" type="submit" (click)="Edit(item['blog_id'])" value="Edit" style="border: black;" style="margin-left: 10px;
+                                    width: 73px;
+                                    height: 27px;
+                                    border-radius: 5px;">
+                                    <input class="btnn warning" type="submit" id="reset" (click)="Delete(item['blog_id'],i)" value="Delete" style="border: black;" style="margin-left: 10px;
+                                    width: 73px;
+                                    height: 27px;
+                                    border-radius: 5px;">
+                              </td>
+
+                                  
+                                  
+                              </tr>
+                              
+                             
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div><!-- .animated -->
+</div><!-- .content -->
+
+
+
+

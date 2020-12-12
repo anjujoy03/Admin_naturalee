@@ -1,0 +1,81 @@
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card" style="width: 200%;overflow:scrollx; overflow-x: auto; ">
+                    <div class="card-header" style="background-color: white;">
+                        <strong class="card-title">Orders</strong>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                        <table class="table" style="scroll-behavior: smooth; ">
+                            <col style="width:40%">
+	                   <col style="width:100px">
+	                      <col style="width:50%">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="width: 30px;">Id</th>
+                                    <th scope="col">Customer Id</th>
+                                    <th scope="col">Customer Name</th>
+                                    <th scope="col">Ship to</th>
+                                    <th scope="col">Order City</th>
+                                    <th scope="col">Delivery Address</th>
+                                    <th scope="col">Zip Code</th>
+                                    <th scope="col">Order Email</th>
+                                    <th scope="col">Order Phone</th>
+                                    <th scope="col">Order Date</th>
+                                    <th scope="col">View Order</th>
+                                    <th scope="col">Change Status</th>
+                                   
+                                 
+                                   
+                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of OrderList">
+                                    <th scope="row">{{item['order_id']}}</th>
+                                    <td>{{item['user_id']}}</td>
+                                    <td>{{item['order_shipname']}}</td>
+                                    <td>{{item['order_shipname']}}</td>
+                                    <td>{{item['order_city']}}</td>
+                                    <td>{{item['odership_address1']}}</td>
+                                    <td>{{item['order_zip']}}</td>
+                                    <td>{{item['order_email']}}</td>
+                                    <td>{{item['order_phone']}}</td>
+                                    <td><a [routerLink]="['/pages/tables/tree-grid',item['order_id']]">View Orders</a></td>
+                                    <td>{{item['order_date'] |date:'short'}}</td>
+                                    <td>
+                                        <select (change)="UpdateStatus($event.target.value,item['user_id'],item['order_id'])">
+                                            <option  *ngIf="item['order_status']=='o'" value="item['order_status']">Ordered</option>
+                                            <option  *ngIf="item['order_status']=='p'" value="item['order_status']">Packed</option>
+                                            <option  *ngIf="item['order_status']=='s'" value="item['order_status']">Shipped</option>
+                                            <option value="o">Ordered</option>
+                                            <option value="p">Packed</option>
+                                            <option value="s">Delivered</option>
+                                        
+                                        </select>
+                                    </td>
+
+                                    
+                                    
+                                    
+                                    
+                                    
+                                </tr>
+                                
+                               
+                            </tbody>
+                        </table>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- .animated -->
+</div><!-- .content -->
+
+
+
+
+

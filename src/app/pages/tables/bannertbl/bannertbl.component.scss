@@ -1,0 +1,28 @@
+.success {
+    border-color: #4CAF50;
+    color: green;
+    margin-right: 10px;
+    border: 1px solid black !important;
+    border-radius: 5px;
+    width: 89px;
+    height: 48px;
+    margin-left: 161px;
+  }
+  
+  .success:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  .warning {
+    border-color: #ff9800;
+    color: orange;
+    width: 89px;
+    height: 48px;
+    border: 1px solid black !important;
+    border-radius: 5px;
+  }
+  
+  .warning:hover {
+    background: #ff9800;
+    color: white;
+  }

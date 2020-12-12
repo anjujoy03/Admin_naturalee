@@ -1,0 +1,93 @@
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="col-lg-10">
+            <div class="card">
+                <div class="card-header"
+                    style="font-style: bold; font-family:'Arial Black', Gadget, sans-serif ; font-size:24px ; color:#06F;">
+                    Banner Form
+                </div>
+                <div class="card-body card-block">
+                    <form action="" method="post" class="" name="myForm">
+                        <div class="row form-group">
+                            <div class="col col-md-3"><label for="multiple-select" class=" form-control-label"
+                                    required>Product Name</label>
+                            </div>
+                            <div class="col col-md-9">
+
+                                <select class="form-control" required style="width: 250px;">
+                                    <option value="">Select Category</option>
+                                    <option value="OUT">Outdoor Plants</option>
+                                    <option value="IN">Indoor Plants</option>
+                                    <option value="AIr">Air Purifying Plants</option>
+                                    <option value="ADE">Adeniums</option>
+                                    <option value="FLO">Flowering Plants</option>
+                                    <option value="CAC">Cactus & Succulents</option>
+
+                                </select>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="col col-md-3"><label for="multiple-select" class=" form-control-label"
+                                required>Category</label>
+                            </div>
+                            <div class="col col-md-9">
+
+                                <select class="form-control" required style="width: 250px;">
+                                    <option value="">Select Category</option>
+                                    <option value="OUT">Outdoor Plants</option>
+                                    <option value="IN">Indoor Plants</option>
+                                    <option value="AIr">Air Purifying Plants</option>
+                                    <option value="ADE">Adeniums</option>
+                                    <option value="FLO">Flowering Plants</option>
+                                    <option value="CAC">Cactus & Succulents</option>
+
+                                </select>
+                            </div>
+                        </div>
+               
+                      
+                        <input class="btnn success" id="submit" type="submit" value="Submit" style="border: black;">
+                        <input class="btnn warning" type="reset" id="reset" value="Reset" style="border: black;">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+ <!-- <nb-card>
+    <nb-card-body>
+  
+      <label class="search-label" for="search">Search:</label>
+      <input nbInput [nbFilterInput]="dataSource" id="search" class="search-input">
+  
+      <table [nbTreeGrid]="dataSource" [nbSort]="dataSource" (sort)="updateSort($event)">
+  
+        <tr nbTreeGridHeaderRow *nbTreeGridHeaderRowDef="allColumns"></tr>
+        <tr nbTreeGridRow *nbTreeGridRowDef="let row; columns: allColumns"></tr>
+  
+        <ng-container [nbTreeGridColumnDef]="customColumn">
+          <th nbTreeGridHeaderCell [nbSortHeader]="getSortDirection(customColumn)" *nbTreeGridHeaderCellDef>
+            {{customColumn}}
+          </th>
+          <td nbTreeGridCell *nbTreeGridCellDef="let row">
+            <ngx-fs-icon [kind]="row.data.kind" [expanded]="row.expanded"></ngx-fs-icon>
+            {{row.data[customColumn]}}
+          </td>
+        </ng-container>
+  
+        <ng-container *ngFor="let column of defaultColumns; let index = index"
+                      [nbTreeGridColumnDef]="column"
+                      [showOn]="getShowOn(index)">
+          <th nbTreeGridHeaderCell [nbSortHeader]="getSortDirection(column)" *nbTreeGridHeaderCellDef>
+            {{column}}
+          </th>
+          <td nbTreeGridCell *nbTreeGridCellDef="let row">{{row.data[column] || '-'}}</td>
+        </ng-container>
+  
+      </table>
+  
+    </nb-card-body>
+  </nb-card> -->
+  
